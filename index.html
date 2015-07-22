@@ -6,13 +6,21 @@
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <style>
       html {
         background: #edf4f0;
         color: #607476;
-        font-family: 'Poiret One', cursive;
         /*text-transform: uppercase;*/
       }
+      p, h1, h2, h3, h4, h5, h6 {
+        font-family: 'Raleway', sans-serif;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
       h1 {
         border-radius: 0.3rem;
         padding: 0.3rem 0.5rem;
@@ -20,14 +28,17 @@
         line-height: 4rem;
         margin: 0;
       }
+
       #name * {
         display: inline-block;
         vertical-align: top;
         margin-top: 3rem;
+        font-family: 'Poiret One', cursive;
       }
       #tag {
         margin-top: 0.8rem;
         font-size: 1.5rem;
+        font-family: 'Poiret One', cursive;
       }
       .tag-space:before {
         content: " | ";
@@ -46,29 +57,180 @@
         margin: 0 1.2rem;
       }
 
-      #tag a:hover {
-        background: transparent;
-        background: url(https://lh3.googleusercontent.com/-p1nr1fkWKUo/T0zUp5CLO3I/AAAAAAAAAWg/jDiQ0cUBuKA/s800/red-pattern.png) repeat;
-        /* TRANSITION */
-        -webkit-transition: background 1s;
-        -moz-transition: background 1s;
-        -o-transition: background 1s;
-        transition: background 1s;
-      }​
+      #programming {
+        display: none;
+      }
+
+      #programming div {
+        width: 22rem;
+      }
+
+      #programming h3 {
+        text-align: center;
+        border-bottom: 1px solid #607476;
+        padding-bottom: 0.5rem;
+      }
+
+      .box-item {
+        width: 22rem;
+        padding: 1rem;
+        overflow: hidden;
+      }
+
+      .box-item img {
+        margin-right: 1rem;
+        float: left;
+        width: 5rem;
+        vertical-align: center;
+      }
+
+      .box-item p{
+        margin: 0.1rem;
+      }
+
+      .box-heading {
+        font-size: 1em;
+        font-weight: 900;
+      }
+
+      #dancebio {
+        display: none;
+        width: 40%;
+        padding-top: 3rem;
+        padding-left: 3rem;
+        padding-bottom: 2em;
+        padding-right: 2em;
+      }
+
+      #danceimage {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        padding-bottom: 0;
+        z-index: -1;
+        display: none;
+      }
+
+
+      /*  SECTIONS  */
+      .section {
+        clear: both;
+        padding: 1em 2em;
+        margin: 1em 2em;
+      }
+
+      /*  COLUMN SETUP  */
+      .col {
+        float:left;
+        margin: 1% 0 1% 1.6%;
+      }
+      .col:first-child { margin-left: 0; }
+
+      /*  GROUPING  */
+      .group:before,
+      .group:after { content:""; display:table; }
+      .group:after { clear:both;}
+      .group { zoom:1; /* For IE 6/7 */ }
+
+      /*  GRID OF THREE  */
+      .span_3_of_3 { width: 100%; }
+      .span_2_of_3 { width: 66.13%; }
+      .span_1_of_3 { width: 32.26%; }
+
+      /*  GO FULL WIDTH BELOW 480 PIXELS */
+      @media only screen and (max-width: 480px) {
+        .col {  margin: 1% 0 1% 0%; }
+        .span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+      }
+
     </style>
   </head>
   <body>
     <center id='name'><h1>Teja Kondapalli</h1></center>
     <center id='tag'>
-    <span id="programmer">  Programmer </span>
-    <span class='tag-space'></span> 
-    <span id="dancer"> Dancer </span>
-  </center>
+      <span id="programmer">  Programmer </span>
+      <span class='tag-space'></span> 
+      <span id="dancer"> Dancer </span>
+    </center>
 
     <center id='links'>
-      <a href='https://github.com/tejak'><img src='./images/github.png'></a>
-      <a href='https://twitter.com/tejakondapalli'><img src='./images/twitter.png'></a>
-      <a href='https://www.linkedin.com/in/tejakondapalli'><img src='./images/linkedin.png'></a>
+      <a href='https://github.com/tejak' target='_blank'><img src='./images/github.png'></a>
+      <a href='https://twitter.com/tejakondapalli' target='_blank'><img src='./images/twitter.png'></a>
+      <a href='https://www.linkedin.com/in/tejakondapalli' target='_blank'><img src='./images/linkedin.png'></a>
     </center>
+
+    <div id="programming" class="section group">
+
+      <div id="education" class="col span_1_of_3">
+        <h3> Education </h3>
+        <div class="box-item">
+          <img src="./images/cornell.png"> </img>
+          <p class="box-heading"> Cornell Tech, Cornell University </p>
+          <p class="box-subtitle"> Masters, Computer Science </p>
+          <p class="box-subtitle"> 2014 - 2015 </p>
+        </div>
+        <div class="box-item">
+          <img src="./images/ucsd.png"> </img>
+          <p class="box-heading"> University of California, San Diego </p>
+          <p class="box-subtitle"> Bachelors, Computer Engineering </p>
+          <p class="box-subtitle"> 2006 - 2010 </p>
+        </div>
+      </div>
+
+
+      <div id="experience" class="col span_1_of_3">
+        <h3> Experience </h3>
+        <div class="box-item">
+          <img src="./images/riverbed.png"> </img>
+          <p class="box-heading"> Riverbed Technology </p>
+          <p class="box-subtitle"> Member of Technical Staff  </p>
+          <p class="box-subtitle"> 2012 - 2014 </p>
+        </div>
+        <div class="box-item">
+          <img src="./images/factset.png"> </img>
+          <p class="box-heading"> Factset Research Systems </p>
+          <p class="box-subtitle"> Software Engineer </p>
+          <p class="box-subtitle"> 2011 - 2012 </p>
+        </div>
+        <div class="box-item">
+          <img src="./images/lockheed.png"> </img>
+          <p class="box-heading"> Lockheed Martin </p>
+          <p class="box-subtitle"> Intern </p>
+          <p class="box-subtitle"> 2009 </p>
+        </div>
+      </div>
+
+      <div id="projects" class="col span_1_of_3">
+        <h3> Projects </h3>
+        <div class="box-item">
+          <a href="https://itunes.apple.com/us/app/water-map/id977516564?mt=8" target="_blank">
+            <img src="./images/watermap.png"> </img>
+          </a>
+          <p class="box-heading"> WaterMap </p>
+          <p class="box-subtitle"> iOS App </p>
+          <p class="box-subtitle"> Developer </p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div id="dancebio">
+      <p> Tejaswi Kondapalli is a Kuchipudi artist from the San Francisco Bay Area, California, USA. She has had an innate passion for dance since her childhood. With her initial training in Kuchipudi from various Bay Area teachers (Smt. Shymala Karra, Smt. Vaidehi Yellai and Smt. Hima Bindu Challa). </p>
+
+      <p> She is a recipient of Fulbright Fellowship for Performing Arts and spent the 2010-2011 academic year living in Hyderabad, India. During this time, she conducted research on Tarangams and Kuchipudi dance, under the guidance of her current Guru, Dr. Uma Rama Rao. She also is grateful to Smt. Revathi Komanduri for enriching her repertoire during this time. </p>
+
+      <p> Undoubtedly, her time in India solidified her aspiration to continue research and performance of Kuchipudi dance, and instilled a passion for promoting the arts and educating audiences through her performances. As a result, she is actively involved in production and telecast of classical dance programs of Yuva Bharati, California. </p>
+
+      <p> Though her professional focus has been on Kuchipudi, Tejaswi is enthusiast for all forms of dance and will jump at any opportunity to get on her and let the music direct the movement.  </p>
+    </div>
+
+    <div id="danceimage">
+      <img src="./images/dance.jpg"> </img>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="./script.js"> </script>
   </body>
 </html>
