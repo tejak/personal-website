@@ -14,6 +14,7 @@ $(document).ready(function() {
 	function clearHomeItems(delay) {
     	$('#links').hide(delay);
     	$('#tag').hide(delay);
+    	$('#back-button').show(delay);
 	}
 
 	function showProgrammingItems(delay) {
@@ -38,6 +39,7 @@ $(document).ready(function() {
         }, delay);
         $('#links').show(delay);
     	$('#tag').show(delay);
+       	$('#back-button').hide(delay);
 	}
 
 	clearProgrammingItems(0);
@@ -45,6 +47,12 @@ $(document).ready(function() {
 	showHomeItems(0);
 
 	$('#name').click(function(){
+    	clearProgrammingItems(500);
+    	clearDanceItems(500);
+        showHomeItems(500);
+	});
+
+	$('#back-button').click(function(){
     	clearProgrammingItems(500);
     	clearDanceItems(500);
         showHomeItems(500);

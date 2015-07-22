@@ -35,6 +35,19 @@
         margin-top: 3rem;
         font-family: 'Poiret One', cursive;
       }
+
+      #back-button{
+        float: left;
+        padding-left: 2rem;
+        padding-top: 0rem;
+        opacity: 0.6;
+        display: none;
+      }
+
+      #back-button:hover {
+        opacity: 1;
+      }
+
       #tag {
         margin-top: 0.8rem;
         font-size: 1.5rem;
@@ -146,7 +159,10 @@
     </style>
   </head>
   <body>
-    <center id='name'><h1>Teja Kondapalli</h1></center>
+    <center id='name'>
+      <h1 id="back-button"> < </h1>
+      <h1>Teja Kondapalli</h1>
+    </center>
     <center id='tag'>
       <span id="programmer">  Programmer </span>
       <span class='tag-space'></span> 
@@ -209,6 +225,21 @@
           <p class="box-heading"> WaterMap </p>
           <p class="box-subtitle"> iOS App </p>
           <p class="box-subtitle"> Developer </p>
+        </div>
+        <h3> Teaching </h3>
+        <div class="box-item">
+          <img src="./images/flatiron.png"> </img>
+          <p class="box-heading"> The Flatiron School </p>
+          <p class="box-subtitle"> Summer Teaching Fellow </p>
+          <p class="box-subtitle"> Advanced Front End Development </p>
+          <p class="box-subtitle"> Summer 2015 </p>
+        </div>
+        <div class="box-item">
+          <img src="./images/teals.png"> </img>
+          <p class="box-heading"> TealsK12 </p>
+          <p class="box-subtitle"> Volunteer Teacher </p>
+          <p class="box-subtitle"> Intro to CS </p>
+          <p class="box-subtitle"> 2013-2014 </p>
         </div>
       </div>
 
