@@ -111,16 +111,55 @@
         font-weight: 900;
       }
 
+      #dancemenu {
+        display: none;
+        padding-top: 3rem;
+        padding-left: 3rem;
+      }
+
+      #dancemenu p{
+        font-family: ;
+        margin: 0rem;
+      }
+      #dancemenu span{
+        padding: 0rem 5rem;
+        font-weight: bold;
+      }
+
       #dancebio {
         display: none;
         width: 40%;
         padding-top: 3rem;
         padding-left: 3rem;
-        padding-bottom: 2em;
-        padding-right: 2em;
+        padding-bottom: 1em;
+        padding-right: 1em;
       }
 
-      #danceimage {
+      #danceevents {
+        display: none;
+        width: 40%;
+        padding-top: 1rem;
+        padding-left: 10rem;
+        padding-bottom: 1em;
+        padding-right: 1em;
+      }
+
+      .dance-event {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      .dance-event-title {
+        font-size: 1.1rem;
+        font-weight: bold;    
+      }
+
+      .dance-event-date {
+        padding-left: 2rem;
+        font-weight: bold;        
+      }
+
+      #dancepinkimage {
         position: fixed;
         bottom: 0px;
         right: 0px;
@@ -129,6 +168,18 @@
         display: none;
       }
 
+      #danceblueimage {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        padding-bottom: 0;
+        z-index: -1;
+        display: none;
+      }
+
+      #danceblueimage img {
+        width:600px;
+      }
 
       /*  SECTIONS  */
       .section {
@@ -162,8 +213,10 @@
       }
 
       @media only screen and (max-width: 1000px) {
-        #danceimage{ visibility: hidden;}
+        #dancepinkimage{ visibility: hidden;}
+        #danceblueimage{ visibility: hidden;}
         #dancebio{ width: 75%;}
+        #danceevents{ width: 75%;}
       }
 
     </style>
@@ -207,6 +260,12 @@
       <div id="experience" class="col span_1_of_3">
         <h3> Experience </h3>
         <div class="box-item">
+          <img src="./images/apple.png"> </img>
+          <p class="box-heading"> Apple </p>
+          <p class="box-subtitle"> Software Engineer </p>
+          <p class="box-subtitle"> 2015 - Present </p>
+        </div>
+        <div class="box-item">
           <img src="./images/riverbed.png"> </img>
           <p class="box-heading"> Riverbed Technology </p>
           <p class="box-subtitle"> Member of Technical Staff  </p>
@@ -249,12 +308,17 @@
           <p class="box-heading"> TealsK12 </p>
           <p class="box-subtitle"> Volunteer Teacher </p>
           <p class="box-subtitle"> Intro to CS </p>
-          <p class="box-subtitle"> 2013-2014 </p>
+          <p class="box-subtitle"> 2013 - 2014 </p>
         </div>
       </div>
-
     </div>
 
+    <div id="dancemenu">  
+        <p>
+        <span id="biomenuitem">Biography</span> 
+        <span id="eventsmenuitem"> Events </span>
+        </p>
+    </div>
 
     <div id="dancebio">
       <p> Tejaswi Kondapalli is a Kuchipudi artist from the San Francisco Bay Area, California, USA. She has had an innate passion for dance since her childhood. With her initial training in Kuchipudi from various Bay Area teachers (Smt. Shymala Karra, Smt. Vaidehi Yellai and Smt. Hima Bindu Challa). </p>
@@ -263,11 +327,36 @@
 
       <p> Undoubtedly, her time in India solidified her aspiration to continue research and performance of Kuchipudi dance, and instilled a passion for promoting the arts and educating audiences through her performances. As a result, she is actively involved in production and telecast of classical dance programs of Yuva Bharati, California. </p>
 
-      <p> Though her professional focus has been on Kuchipudi, Tejaswi is enthusiast for all forms of dance and will jump at any opportunity to get on her and let the music direct the movement.  </p>
+      <p> Though her professional focus has been on Kuchipudi, Tejaswi is enthusiast for all forms of dance and loves any opportunity to get on her feet.  </p>
     </div>
 
-    <div id="danceimage">
-      <img src="./images/dance.jpg"> </img>
+    <div id="danceevents">
+
+      <div class="dance-event"> 
+        <p class="dance-event-title"> Samriti Indian Dance Fundraiser  </p>
+        <p class="dance-event-date"> Wednesday February 24th, 7-9pm </p>
+        <p> UCSC Colleges Nine and Ten Multipurpose Room </p>
+      </div>
+
+      <div class="dance-event"> 
+        <p class="dance-event-title"> 15th Annual Mahasivaratri Dance Celebration </p>
+        <p class="dance-event-date"> Sunday March 6th, 6:45pm </p>
+        <p> Mitchell Community Center, Palo Alto </p>
+      </div>
+
+      <div class="dance-event"> 
+        <p class="dance-event-title"> Mahashivarathri Natyothsav </p>
+        <p class="dance-event-date"> Sunday March 20th, 11:30am </p>
+        <p> Santan Dharma Kendra, San Jose </p>
+      </div>
+
+    </div>
+
+    <div id="danceblueimage">
+      <img src="./images/danceblue.jpg"> </img>
+    </div>
+    <div id="dancepinkimage">
+      <img src="./images/dancepink.jpg"> </img>
     </div>
 
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>

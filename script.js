@@ -8,7 +8,10 @@ $(document).ready(function() {
 
 	function clearDanceItems(delay) {
         $('#dancebio').hide(delay);
-    	$('#danceimage').fadeOut(100);
+        $('#danceevents').hide(delay);
+        $('#dancemenu').hide(delay);
+    	$('#dancepinkimage').fadeOut(100);
+      	$('#danceblueimage').fadeOut(100);
 	}
 
 	function clearHomeItems(delay) {
@@ -25,13 +28,28 @@ $(document).ready(function() {
 	}
 	
 	function showDanceItems(delay) {
+        $('#dancemenu').show(delay);
 		$('#dancebio').show(delay);
 		$('html').animate({
           backgroundColor: "black",
         }, delay, function(){
-			$('#danceimage').fadeIn(300);
+			$('#dancepinkimage').fadeIn(300);
         });
  	}
+
+	$("#eventsmenuitem").click(function(){
+		$('#dancepinkimage').fadeOut(300);
+		$('#danceblueimage').fadeIn(300);
+		$('#danceevents').show(300);
+		$('#dancebio').hide(300);
+	});
+
+	$("#biomenuitem").click(function(){
+		$('#dancepinkimage').fadeIn(300);
+		$('#danceblueimage').fadeOut(300);
+		$('#danceevents').hide(300);
+		$('#dancebio').show(300);
+	});
 
 	function showHomeItems(delay) {
 		$('html').animate({
